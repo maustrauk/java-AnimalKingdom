@@ -80,5 +80,16 @@ public class Main {
             }
         });
         breathWithLungsLayEggs.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List alphabetically only those animals that were named in 1758:");
+        List<Animals> listNamed1758 = new ArrayList<>();
+        animalsList.forEach(item -> {
+            if (item.getYear() == 1758) {
+                listNamed1758.add(item);
+            }
+        });
+        listNamed1758.sort((firstItem, secondItem) -> (firstItem.getName().charAt(0) > secondItem.getName().charAt(0)) ? 1 : -1);
+        listNamed1758.forEach(item -> System.out.println(item.contain()));
     }
 }
