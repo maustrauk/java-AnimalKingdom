@@ -91,5 +91,16 @@ public class Main {
         });
         listNamed1758.sort((firstItem, secondItem) -> (firstItem.getName().charAt(0) > secondItem.getName().charAt(0)) ? 1 : -1);
         listNamed1758.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("For the list of animals, list alphabetically those animals that are mammals:");
+        List<Animals> listMyMammals = new ArrayList<>();
+        animalsList.forEach(item -> {
+            if (item.getType() == "mammal") {
+                listMyMammals.add(item);
+            }
+        });
+        listMyMammals.sort((firstItem, secondItem) -> (firstItem.getName().charAt(0) > secondItem.getName().charAt(0)) ? 1 : -1);
+        listMyMammals.forEach(item -> System.out.println(item.contain()));
     }
 }

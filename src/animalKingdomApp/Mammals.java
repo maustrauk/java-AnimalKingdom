@@ -1,8 +1,10 @@
 package animalKingdomApp;
 
 public class Mammals extends Animals {
+
+
     public Mammals(String name, int yearDiscovered) {
-        super(name, yearDiscovered);
+        super(name, yearDiscovered, "mammal");
     }
 
     @Override

@@ -5,15 +5,18 @@ public abstract class Animals {
     protected int id;
     protected String name;
     protected int yearDiscovered;
+    protected String type;
 
     protected Animals (
         String name,
-        int yearDiscovered
+        int yearDiscovered,
+        String type
     ) {
         maxId++;
         id = maxId;
         this.name = name;
         this.yearDiscovered = yearDiscovered;
+        this.type = type;
     }
 
     public void consumeFood () {
@@ -42,5 +45,9 @@ public abstract class Animals {
 
     public String getName () {
         return name;
+    }
+
+    public String getType () {
+        return type;
     }
 }
