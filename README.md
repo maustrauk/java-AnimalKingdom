@@ -68,7 +68,7 @@ Create a collection for the animals using the following data
   * [*] List alphabetically only those animals that were named in 1758
 
 * Stretch Goal
-  * [ ] For the list of animals, list alphabetically those animals that are mammals.
+  * [*] For the list of animals, list alphabetically those animals that are mammals.
 
 ## Results
 
