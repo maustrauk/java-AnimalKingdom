@@ -43,12 +43,22 @@ public class Main {
 
         System.out.println("");
         System.out.println("List all the animals alphabetically:");
-        animalsList.sort((firstItem, secondItem) -> (firstItem.getFirstCharOfName() > secondItem.getFirstCharOfName()) ? 1 : -1);
+        animalsList.sort((firstItem, secondItem) -> (firstItem.getName().charAt(0) > secondItem.getName().charAt(0)) ? 1 : -1);
         animalsList.forEach(item -> System.out.println(item.contain()));
 
         System.out.println("");
         System.out.println("List all the animals order by how they move:");
         animalsList.sort((firstItem, secondItem) -> (firstItem.move().charAt(0) > secondItem.move().charAt(0)) ? 1 : -1);
         animalsList.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List only those animals the breath with lungs");
+        List<Animals> breathWithLungs = new ArrayList<>();
+        animalsList.forEach(item -> {
+            if (item.breath() == "lungs") {
+                breathWithLungs.add(item);
+            }
+        });
+        breathWithLungs.forEach(item -> System.out.println(item.contain()));
     }
 }

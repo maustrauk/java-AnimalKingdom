@@ -40,7 +40,7 @@ public abstract class Animals {
         return yearDiscovered;
     }
 
-    public char getFirstCharOfName () {
-        return name.charAt(0);
+    public String getName () {
+        return name;
     }
 }
