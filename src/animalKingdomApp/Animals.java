@@ -32,5 +32,11 @@ public abstract class Animals {
         return "reproduce";
     }
 
+    public String contain () {
+        return "Item #" + id + " Name: `" + name + "` Year Named: " + yearDiscovered;
+    }
 
+    public int getYear () {
+        return yearDiscovered;
+    }
 }

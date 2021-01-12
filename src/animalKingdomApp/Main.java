@@ -26,5 +26,19 @@ public class Main {
         fishList.add(new Fish("Salmon", 1758));
         fishList.add(new Fish("Catfish", 1817));
         fishList.add(new Fish("Perch", 1758));
+
+        List<Animals> animalsList = new ArrayList<>();
+
+        mammalsList.forEach(item -> animalsList.add(item));
+        birdsList.forEach(item -> animalsList.add(item));
+        fishList.forEach(item -> animalsList.add(item));
+
+        System.out.println("Before any action:");
+        animalsList.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List all the animals in descending order by year named:");
+        animalsList.sort((firstItem, secondItem) -> (firstItem.getYear() > secondItem.getYear()) ? -1 : 1);
+        animalsList.forEach(item -> System.out.println(item.contain()));
     }
 }
