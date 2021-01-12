@@ -52,7 +52,7 @@ public class Main {
         animalsList.forEach(item -> System.out.println(item.contain()));
 
         System.out.println("");
-        System.out.println("List only those animals the breath with lungs");
+        System.out.println("List only those animals the breath with lungs:");
         List<Animals> breathWithLungs = new ArrayList<>();
         animalsList.forEach(item -> {
             if (item.breath() == "lungs") {
@@ -62,7 +62,7 @@ public class Main {
         breathWithLungs.forEach(item -> System.out.println(item.contain()));
 
         System.out.println("");
-        System.out.println("List only those animals that breath with lungs and were named in 1758");
+        System.out.println("List only those animals that breath with lungs and were named in 1758:");
         List<Animals> breathWithLungs1758 = new ArrayList<>();
         animalsList.forEach(item -> {
             if (item.breath() == "lungs" && item.getYear() == 1758) {
@@ -70,5 +70,15 @@ public class Main {
             }
         });
         breathWithLungs1758.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List only those animals that lay eggs and breath with lungs:");
+        List<Animals> breathWithLungsLayEggs = new ArrayList<>();
+        animalsList.forEach(item -> {
+            if (item.breath() == "lungs" && item.reproduce() == "eggs") {
+                breathWithLungsLayEggs.add(item);
+            }
+        });
+        breathWithLungsLayEggs.forEach(item -> System.out.println(item.contain()));
     }
 }
