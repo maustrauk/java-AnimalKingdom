@@ -60,5 +60,15 @@ public class Main {
             }
         });
         breathWithLungs.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List only those animals that breath with lungs and were named in 1758");
+        List<Animals> breathWithLungs1758 = new ArrayList<>();
+        animalsList.forEach(item -> {
+            if (item.breath() == "lungs" && item.getYear() == 1758) {
+                breathWithLungs1758.add(item);
+            }
+        });
+        breathWithLungs1758.forEach(item -> System.out.println(item.contain()));
     }
 }
