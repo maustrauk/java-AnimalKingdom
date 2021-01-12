@@ -45,5 +45,10 @@ public class Main {
         System.out.println("List all the animals alphabetically:");
         animalsList.sort((firstItem, secondItem) -> (firstItem.getFirstCharOfName() > secondItem.getFirstCharOfName()) ? 1 : -1);
         animalsList.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List all the animals order by how they move:");
+        animalsList.sort((firstItem, secondItem) -> (firstItem.move().charAt(0) > secondItem.move().charAt(0)) ? 1 : -1);
+        animalsList.forEach(item -> System.out.println(item.contain()));
     }
 }
