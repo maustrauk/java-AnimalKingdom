@@ -40,5 +40,10 @@ public class Main {
         System.out.println("List all the animals in descending order by year named:");
         animalsList.sort((firstItem, secondItem) -> (firstItem.getYear() > secondItem.getYear()) ? -1 : 1);
         animalsList.forEach(item -> System.out.println(item.contain()));
+
+        System.out.println("");
+        System.out.println("List all the animals alphabetically:");
+        animalsList.sort((firstItem, secondItem) -> (firstItem.getFirstCharOfName() > secondItem.getFirstCharOfName()) ? 1 : -1);
+        animalsList.forEach(item -> System.out.println(item.contain()));
     }
 }

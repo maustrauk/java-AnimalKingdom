@@ -39,4 +39,8 @@ public abstract class Animals {
     public int getYear () {
         return yearDiscovered;
     }
+
+    public char getFirstCharOfName () {
+        return name.charAt(0);
+    }
 }
